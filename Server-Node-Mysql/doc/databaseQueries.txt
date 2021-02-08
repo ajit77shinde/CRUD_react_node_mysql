@@ -1,0 +1,23 @@
+CREATE  TABLE IF NOT EXISTS `users` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `first_name` VARCHAR(255) NOT NULL,
+  `last_name` VARCHAR(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `phone` VARCHAR(50) NOT NULL,
+  `is_deleted` TINYINT UNSIGNED DEFAULT 0,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+INSERT INTO `node_mysql_crud_db`.`users` (`first_name`, `last_name`, `image`, `gender`, `email`, `phone`, `is_deleted`, `created_at`) VALUES
+ ('John', 'Doe', 'profileImage1', 'M', 'johndoe@gmail.com', '1234567890', '0', '2019-11-19 03:30:30');
+
+
+INSERT INTO `node_mysql_crud_db`.`users` (`first_name`, `last_name`,`image`, `gender`, `email`, `phone`, `is_deleted`, `created_at`) VALUES 
+('Jane', 'Doe', 'profileImage2', 'M', 'janedoe@gmail.com', '9876543210', '0', '2019-11-19 03:35:30');
+
+
+
